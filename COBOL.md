@@ -72,6 +72,3 @@ Kapan dipakai COMP dan COMP-3:
 | PERFORM UNTIL   | `PERFORM paragraf-name UNTIL kondisi`                               | Mengulang paragraf sampai kondisi terpenuhi (loop dengan syarat berhenti).                 | `PERFORM Baca-File UNTIL EOF`                               |
 | PERFORM VARYING | `PERFORM paragraf-name VARYING var FROM awal BY step UNTIL kondisi` | Loop dengan variabel counter, mirip `for` di bahasa lain.                                  | `PERFORM Tampilkan-Data VARYING I FROM 1 BY 1 UNTIL I > 10` |
 | PERFORM INLINE  | `PERFORM ... END-PERFORM`                                           | Menjalankan kode langsung di antara `PERFORM` dan `END-PERFORM` (tanpa paragraf terpisah). | `PERFORM DISPLAY "HELLO" END-PERFORM`                       |
-
-
-
