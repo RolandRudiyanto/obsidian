@@ -1,0 +1,184 @@
+{
+  "main": {
+    "id": "ca6d60ad1d2247b3",
+    "type": "split",
+    "children": [
+      {
+        "id": "d06f093e2f5dd22b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "415de906b666686a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "COBOL.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "COBOL"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "dbad60bb9d6684c1",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e3ddb8a4b163a14",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5b5eb334ab7ddc47",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "f6e2fcf47f7fd41c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c588fcf48c4c4021",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e84d1991b59654b8",
+    "type": "split",
+    "children": [
+      {
+        "id": "f26827429323bf6f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0b88917f623d55f7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "COBOL.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for COBOL"
+            }
+          },
+          {
+            "id": "58659021d4076e52",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "COBOL.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from COBOL"
+            }
+          },
+          {
+            "id": "cb7eed947a927fa0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "95c6e44034be663b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "COBOL.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of COBOL"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "415de906b666686a",
+  "lastOpenFiles": [
+    "Pasted image 20250815165216.png",
+    "Pasted image 20250815165121.png",
+    "Pasted image 20250815165037.png",
+    "Pasted image 20250815165034.png",
+    "Pasted image 20250815164814.png",
+    "Soal File.md",
+    "COBOL.md",
+    "Untitled.canvas",
+    "Pasted image 20250815094941.png",
+    "Welcome.md"
+  ]
+}
