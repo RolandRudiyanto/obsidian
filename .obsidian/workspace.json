@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d06f093e2f5dd22b",
+        "id": "70677b1a4105e8a1",
         "type": "tabs",
         "children": [
           {
-            "id": "415de906b666686a",
+            "id": "e0a25d3b3227465b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,6 +19,20 @@
               },
               "icon": "lucide-file",
               "title": "COBOL"
+            }
+          },
+          {
+            "id": "2e72fb4fddcd14c9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meeting/Meeting Web Revamp 08 -19 - 2025.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Meeting Web Revamp 08 -19 - 2025"
             }
           }
         ]
@@ -160,6 +174,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -168,16 +183,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "415de906b666686a",
+  "active": "e0a25d3b3227465b",
   "lastOpenFiles": [
+    "Meeting/Meeting Web Revamp 08 -19 - 2025.md",
+    "COBOL.md",
+    "Untitled.canvas",
+    "Meeting",
     "Pasted image 20250815165216.png",
     "Pasted image 20250815165121.png",
     "Pasted image 20250815165037.png",
     "Pasted image 20250815165034.png",
     "Pasted image 20250815164814.png",
     "Soal File.md",
-    "COBOL.md",
-    "Untitled.canvas",
     "Pasted image 20250815094941.png",
     "Welcome.md"
   ]

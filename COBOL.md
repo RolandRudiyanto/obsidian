@@ -72,3 +72,119 @@ Kapan dipakai COMP dan COMP-3:
 | PERFORM UNTIL   | `PERFORM paragraf-name UNTIL kondisi`                               | Mengulang paragraf sampai kondisi terpenuhi (loop dengan syarat berhenti).                 | `PERFORM Baca-File UNTIL EOF`                               |
 | PERFORM VARYING | `PERFORM paragraf-name VARYING var FROM awal BY step UNTIL kondisi` | Loop dengan variabel counter, mirip `for` di bahasa lain.                                  | `PERFORM Tampilkan-Data VARYING I FROM 1 BY 1 UNTIL I > 10` |
 | PERFORM INLINE  | `PERFORM ... END-PERFORM`                                           | Menjalankan kode langsung di antara `PERFORM` dan `END-PERFORM` (tanpa paragraf terpisah). | `PERFORM DISPLAY "HELLO" END-PERFORM`                       |
+# **File Organization**
+File Organization merupkan cara file disimpan & diakses** oleh program COBOL. Pilihan ini kamu tentukan di `ENVIRONMENT DIVISION > FILE-CONTROL` saat `SELECT` file.
+
+Jenis File Organization
+
+| Jenis           | Analogi sehari-hari       | Cara akses        | Kegunaan utama                      | Deskripsi                                                                                                                                                                                                                                              | Contoh Code                                                                                                                                                              |
+| --------------- | ------------------------- | ----------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Sequential      | Kaset tape                | Dari awal → akhir | Tape processing, batch lama         | - File dibaca **record demi record**, tidak bisa langsung lompat ke record tertentu.<br>- Umumnya dipakai di **mainframe tape** atau **file biner fixed-length**.                                                                                      | SELECT SEQ-FILE ASSIGN TO 'DATASEQ.DAT'<br>    ORGANIZATION IS SEQUENTIAL.<br>                                                                                           |
+| Line Sequential | File teks baris-per-baris | Dari awal → akhir | Input/output teks sederhana         | - **Seperti file teks biasa** 📄 (tiap baris = 1 record).<br>- Ada “Enter” di akhir record.<br>- Lebih sering dipakai di PC / sistem modern untuk laporan.                                                                                             | SELECT TXT-FILE ASSIGN TO 'REPORT.TXT'<br>    ORGANIZATION IS LINE SEQUENTIAL.<br>                                                                                       |
+| Relative        | Loker bernomor            | By nomor record   | Data dengan ID urut                 | - **Seperti deretan loker bernomor** 🔢 (1, 2, 3, …).<br>- Bisa langsung ambil record nomor 57 tanpa harus baca dari awal.<br>- Cocok untuk data kecil-menengah di mana record dikenali dengan “nomor urut”.                                           | SELECT REL-FILE ASSIGN TO 'REL.DAT'<br>    ORGANIZATION IS RELATIVE<br>    ACCESS MODE IS RANDOM<br>    RELATIVE KEY IS REC-NUM.<br>                                     |
+| Indexed         | Kamus / database          | By key atau urut  | File transaksi, customer, inventory | - **Seperti kamus atau database mini** 📚 → pakai kata kunci (key) untuk mencari data.<br>- Ada **RECORD KEY** (misalnya Customer-ID).<br>- Bisa **Sequential**, **Random**, atau **Dynamic** (campuran).<br>- Paling fleksibel untuk aplikasi bisnis. | SELECT CUST-FILE ASSIGN TO 'CUSTOMER.DAT'<br>    ORGANIZATION IS INDEXED<br>    ACCESS MODE IS DYNAMIC<br>    RECORD KEY IS CUST-ID<br>    FILE STATUS IS WS-STATUS.<br> |
+# **File Procesing**
+**File Processing** adalah cara program COBOL **membaca, menulis, mengubah, atau menghapus data di file**. 
+Gambaran Besar:
+- **Definisikan file**  
+    `ENVIRONMENT DIVISION > INPUT-OUTPUT SECTION > FILE-CONTROL`
+    - `DATA DIVISION > FILE SECTION` (struktur 1 record).
+- **OPEN** file (INPUT/OUTPUT/I-O/EXTEND).
+- **Proses**: `READ / WRITE / REWRITE / DELETE` (sesuai organisasi & akses).
+- **CLOSE** file.
+Langkah Langkah Pemerosesan File:
+- **OPEN** → buka file
+    - `INPUT` (baca)
+    - `OUTPUT` (buat baru + tulis)
+    - `I-O` (baca & update)
+    - `EXTEND` (tambah di akhir)
+- **READ** → baca record
+- **WRITE** → tulis record baru
+- **REWRITE** → update record yang sudah ada (Indexed/Relative)
+- **DELETE** → hapus record (Indexed/Relative)
+- **CLOSE** → tutup file
+Access Mode:
+- **SEQUENTIAL** → baca/tulis berurutan.
+- **RANDOM** → langsung ke record tertentu.
+- **DYNAMIC** → bisa sequential + random.
+Error Handling:
+- **"00"** sukses
+- **"10"** End-of-file
+- **"22"** Duplikat key (WRITE)
+- **"23"** Key tidak ditemukan (READ)
+- **"35"** File tidak ada saat OPEN
+- **"39"** Salah panjang record / definisi tidak cocok
+- **"41"/"42"** Sudah/belum di-OPEN
+- **"46"** READ setelah EOF
+## **File Control (Wajib)**
+Tanpa FILE-CONTROL, COBOL **tidak tahu**:
+- file apa yang dipakai,
+- file itu disimpan di mana,
+- bagaimana cara mengaksesnya,
+- apa kunci record-nya,
+- dan bagaimana menangani error.
+Contoh Penggunaan
+	FILE-CONTROL.
+    SELECT IN-TXT  ASSIGN TO 'input.txt'
+        ORGANIZATION IS LINE SEQUENTIAL.
+
+    SELECT CUST-IDX ASSIGN TO 'customer.dat'
+        ORGANIZATION IS INDEXED
+        ACCESS MODE  IS DYNAMIC
+        RECORD KEY   IS CUST-ID
+        FILE STATUS  IS FS-IDX.
+
+    SELECT REL-FILE ASSIGN TO 'relative.dat'
+        ORGANIZATION IS RELATIVE
+        ACCESS MODE  IS RANDOM
+        RELATIVE KEY IS REL-NO
+        FILE STATUS  IS FS-REL
+# **Advanced Sequential Files**
+**Advanced Sequential Files** → melibatkan:
+1. **SORT** → mengurutkan record berdasarkan kunci tertentu.
+2. **MERGE** → menggabungkan beberapa file yang sudah diurutkan.
+3. **Update Master File** → gabungkan file transaksi dengan file master (umum di payroll, inventory, dll).
+### **SORT**
+- `SORT-FILE` = file kerja sementara.
+- `ON ASCENDING KEY` = urutan naik (bisa juga `DESCENDING`).
+- `USING` = file input yang belum terurut.
+- `GIVING` = file output hasil sort.
+### **MERGE**
+- Sintaks:
+    `MERGE SORT-FILE ON ASCENDING KEY EMP-ID      USING FILE1 FILE2      GIVING FILE-MERGED.`
+- Aturan:
+    - File input harus **sudah terurut** berdasarkan key yang sama.
+    - Cocok untuk update data master dari transaksi.
+### **Perbedaan Sort dan Merge**
+
+| Fitur    | SORT                                | MERGE                               |
+| -------- | ----------------------------------- | ----------------------------------- |
+| Input    | 1 file (belum terurut)              | 2+ file (sudah terurut)             |
+| Output   | 1 file terurut                      | 1 file gabungan terurut             |
+| Kegunaan | Membersihkan/urutkan data transaksi | Update master file dari banyak file |
+# **Table**
+OCCURS n TIMES ini dugunakan untuk menyatakan bahwa item dari data tersebut berulan
+01 STUDENT-TABLE.
+   05 STUDENT-ID   PIC 9(5) OCCURS 100 TIMES.
+Artinya:
+- `STUDENT-ID` = array dengan 100 elemen.
+- Tiap elemen punya 5 digit angka.
+### **Searching Tables**
+- Sequential Search
+	-  Digunakan kalau tabel **tidak terurut**.
+	- COBOL periksa elemen dari awal sampai cocok.
+- Binary Search
+	-  Digunakan kalau tabel **sudah diurutkan**.
+	- Lebih cepat karena metode binary search.
+# **String Handling**
+- **STRING** → menggabungkan string.
+- **UNSTRING** → memecah string.
+- **INSPECT** → menghitung/replace karakter.
+# **Troubleshooting**
+- Error umum di COBOL:
+    - **Numeric overflow** → hasil lebih besar dari PIC.
+    - **Logic error** → program jalan tapi hasil salah.
+- Pencegahan:
+    - Gunakan `ON SIZE ERROR` pada COMPUTE.
+    - Pakai PIC field yang lebih panjang.
+    - Debug dengan `DISPLAY` isi variabel.
