@@ -1,5 +1,6 @@
 
-**Computational verbs**# **Standar Nama Cobol:**
+# **Computational verbs**
+**Standar Nama Cobol:**
 - **Hanya huruf, angka, dan tanda hubung (-)** yang boleh digunakan.
 - **Tidak boleh** ada spasi.
 - **Tidak boleh** diawali atau diakhiri dengan tanda hubung.
@@ -188,3 +189,51 @@ Artinya:
     - Gunakan `ON SIZE ERROR` pada COMPUTE.
     - Pakai PIC field yang lebih panjang.
     - Debug dengan `DISPLAY` isi variabel.
+
+# **DDL Operations**
+**DDL (Data Definition Language)** = perintah untuk **mendefinisikan/ubah struktur** database:
+- `CREATE` (schema, table, index, view, sequence)
+- `ALTER` (ubah struktur tabel: tambah kolom, ubah tipe—tergantung dukungan)
+- `DROP` (hapus objek)
+- `RENAME` (ganti nama objek—tergantung versi)
+- `GRANT/REVOKE` (izin akses)
+**Praktik umum di mainframe**: DDL biasanya dieksekusi oleh DBA lewat script (SPUFI/DSNTEP2/DSNTEP4) **di luar program COBOL**.  
+**Kalau tetap perlu dari COBOL** → harus lewat **Dynamic SQL** (`EXECUTE IMMEDIATE`/`PREPARE ... EXECUTE`). DDL tidak “dibekukan” sebagai **static SQL** saat bind.
+Objek-objek DDL yang perlu kamu kenal
+- **SCHEMA**: “nama depan” objek (mis. `PAYROLL.EMPLOYEE` → `PAYROLL` adalah schema).
+- **TABLE**: tempat data disimpan (kolom + tipe data + constraint).
+- **INDEX**: mempercepat pencarian/penyortiran (bukan data, tapi struktur bantu).
+- **VIEW**: “tabel virtual” hasil query.
+- **SEQUENCE/IDENTITY**: generator angka bertambah otomatis.
+- **CONSTRAINT**: aturan data (PRIMARY KEY, UNIQUE, FOREIGN KEY, CHECK, NOT NULL).
+Pola dalam DLL:
+- EXECUTE IMMEDIATE
+	-> Ini akan menjalankan lansung string querynya
+- `PREPARE` + `EXECUTE`
+	-> Dipakai kalau query **dibangun dinamis** (misalnya tabel/kolom berdasarkan input user).
+	Langkah:
+    1. `PREPARE` → mendaftarkan string SQL ke DB2.
+    2. `EXECUTE` → menjalankan SQL yang sudah diprepare.
+**Error Handling**
+-  `-601` → objek sudah ada (misalnya CREATE TABLE pada tabel yang sudah ada).
+- `-204` → objek tidak ditemukan (DROP TABLE pada tabel yang tidak ada).
+- `-104` → syntax error.
+- Selalu log **SQLCODE** dan **SQLSTATE**.
+**Performance**
+- Dynamic SQL lebih berat dibanding static, karena DB2 harus parsing di runtime.
+- Makanya DDL biasanya tidak ditaruh di program COBOL bisnis, tapi di script SQL khusus (SPUFI/DSNTEP2).
+# **DML Operations**
+**DML (Data Manipulation Language)** adalah perintah SQL untuk **mengelola isi tabel**
+Contoh DML:
+- `INSERT` → menambah data.
+- `UPDATE` → mengubah data.
+- `DELETE` → menghapus data.
+- `SELECT` → mengambil data.
+Contoh Penulisan di Cobol:
+EXEC SQL
+   <SQL Statement>
+END-EXEC.
+- Semua dijalankan lewat `EXEC SQL ... END-EXEC` dengan **host variable**.
+- Harus selalu cek `SQLCODE` untuk pastikan hasilnya.
+- Gunakan **COMMIT** / **ROLLBACK** untuk kontrol transaksi.
+# **Keys and Index**
