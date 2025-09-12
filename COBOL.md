@@ -236,4 +236,19 @@ END-EXEC.
 - Semua dijalankan lewat `EXEC SQL ... END-EXEC` dengan **host variable**.
 - Harus selalu cek `SQLCODE` untuk pastikan hasilnya.
 - Gunakan **COMMIT** / **ROLLBACK** untuk kontrol transaksi.
-# **Keys and Index**
+
+Database COBOL hanya membuat command saja dan akan di run dengan menggunakan bahasa pemprograman lain seperti python untuk memasukan data ke database sebagai contoh:
+COBOL buat file `employee.tmp`:
+Python:
+import psycopg2
+
+conn = psycopg2.connect("dbname=mydb user=postgres password=mypass")
+cur = conn.cursor()
+with open('employee.tmp') as f:
+    for line in f:
+        name, salary = line.strip().split(',')
+        cur.execute("INSERT INTO employee (emp_name, salary) VALUES (%s, %s)", (name, salary))
+conn.commit()
+cur.close()
+conn.close()
+

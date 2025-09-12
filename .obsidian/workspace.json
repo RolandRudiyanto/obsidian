@@ -22,17 +22,38 @@
             }
           },
           {
-            "id": "2e72fb4fddcd14c9",
+            "id": "e0b3c2f4a9784ba0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meeting/Meeting Web Revamp 08 -19 - 2025.md",
+                "file": "Rangkuman.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Meeting Web Revamp 08 -19 - 2025"
+              "title": "Rangkuman"
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "b051d326c974fba0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "66048ee1cf834a89",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "COBOL.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "COBOL"
             }
           }
         ]
@@ -183,10 +204,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e0a25d3b3227465b",
+  "active": "e0b3c2f4a9784ba0",
   "lastOpenFiles": [
-    "Meeting/Meeting Web Revamp 08 -19 - 2025.md",
     "COBOL.md",
+    "Rangkuman.md",
+    "Meeting/Meeting Web Revamp 08 -19 - 2025.md",
     "Untitled.canvas",
     "Meeting",
     "Pasted image 20250815165216.png",
