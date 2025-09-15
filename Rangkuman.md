@@ -45,7 +45,7 @@
 	- **Tidak boleh** menggunakan kata kunci COBOL (reserved words).
 	- Panjang nama **umumnya maksimal 30 karakter** (tergantung compiler, beberapa modern COBOL mendukung lebih panjang).
 	- Penulisan biasanya **huruf besar semua** (UPPERCASE)
-- Level Varibale
+- Level Variable
 
 | Level   | Fungsi                                                                                   |
 | ------- | ---------------------------------------------------------------------------------------- |
@@ -128,7 +128,7 @@ Bagian ini digunakan untuk melakukan perhitungan aritmatika pada Procedure Devis
 | PERFORM INLINE  | `PERFORM ... END-PERFORM`                                           | Menjalankan kode langsung di antara `PERFORM` dan `END-PERFORM` (tanpa paragraf terpisah). | `PERFORM DISPLAY "HELLO" END-PERFORM`                       |
 
 # **File Organization**
-File Organization merupkan cara file disimpan & diakses** oleh program COBOL. Pilihan ini kamu tentukan di `ENVIRONMENT DIVISION > FILE-CONTROL` saat `SELECT` file.
+File Organization merupkan cara file disimpan & diakses** oleh program COBOL. Pilihan ini ditentukan di `ENVIRONMENT DIVISION > FILE-CONTROL` saat `SELECT` file.
 
 Jenis File Organization
 
@@ -138,7 +138,7 @@ Jenis File Organization
 | Line Sequential | File teks baris-per-baris | Dari awal → akhir | Input/output teks sederhana         | - **Seperti file teks biasa**  (tiap baris = 1 record).<br>- Ada “Enter” di akhir record.<br>- Lebih sering dipakai di PC / sistem modern untuk laporan.                                                                                               | SELECT TXT-FILE ASSIGN TO 'REPORT.TXT'<br>    ORGANIZATION IS LINE SEQUENTIAL.<br>                                                                                       |
 | Relative        | Loker bernomor            | By nomor record   | Data dengan ID urut                 | - **Seperti deretan loker bernomor**  (1, 2, 3, …).<br>- Bisa langsung ambil record nomor 57 tanpa harus baca dari awal.<br>- Cocok untuk data kecil-menengah di mana record dikenali dengan “nomor urut”.                                             | SELECT REL-FILE ASSIGN TO 'REL.DAT'<br>    ORGANIZATION IS RELATIVE<br>    ACCESS MODE IS RANDOM<br>    RELATIVE KEY IS REC-NUM.<br>                                     |
 | Indexed         | Kamus / database          | By key atau urut  | File transaksi, customer, inventory | - **Seperti kamus atau database mini** 📚 → pakai kata kunci (key) untuk mencari data.<br>- Ada **RECORD KEY** (misalnya Customer-ID).<br>- Bisa **Sequential**, **Random**, atau **Dynamic** (campuran).<br>- Paling fleksibel untuk aplikasi bisnis. | SELECT CUST-FILE ASSIGN TO 'CUSTOMER.DAT'<br>    ORGANIZATION IS INDEXED<br>    ACCESS MODE IS DYNAMIC<br>    RECORD KEY IS CUST-ID<br>    FILE STATUS IS WS-STATUS.<br> |
-# **File Procesing**
+# **File Processing**
 **File Processing** adalah cara program COBOL **membaca, menulis, mengubah, atau menghapus data di file**. 
 Gambaran Besar:
 - **Definisikan file**  
