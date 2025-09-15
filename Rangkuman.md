@@ -147,7 +147,7 @@ Gambaran Besar:
 - **OPEN** file (INPUT/OUTPUT/I-O/EXTEND).
 - **Proses**: `READ / WRITE / REWRITE / DELETE` (sesuai organisasi & akses).
 - **CLOSE** file.
-Langkah Langkah Pemerosesan File:
+Langkah-langkah Pemrosesan File:
 - **OPEN** → buka file
     - `INPUT` (baca)
     - `OUTPUT` (buat baru + tulis)
@@ -218,7 +218,7 @@ Contoh Penggunaan
 | Output   | 1 file terurut                      | 1 file gabungan terurut             |
 | Kegunaan | Membersihkan/urutkan data transaksi | Update master file dari banyak file |
 # **Table**
-OCCURS n TIMES ini dugunakan untuk menyatakan bahwa item dari data tersebut berulan
+OCCURS n TIMES ini digunakan untuk menyatakan bahwa item dari data tersebut berulan
 01 STUDENT-TABLE.
    05 STUDENT-ID   PIC 9(5) OCCURS 100 TIMES.
 Artinya:
