@@ -25,11 +25,11 @@
 	-> Menjelaskan lingkungan tempat program berjalan
 		- Biasanya berhubungan dengan file input/output.
 		- Tidak selalu dipakai dalam program kecil.
-- DATA DEVISION
+- DATA DIVISION
 	-> Mendefinisikan semua variabel & struktur data
-		- FILE SECTION -> Digunakan untuk mendeviniskan file external
+		- FILE SECTION -> Digunakan untuk mendefiniskan file external
 		- WORKING-STORAGE SECTION -> Global Variable
-		- LOCAL-STORAGE SECTION -> Local Variable (Variable yanng harus di inisialisasi ulang setiap program berjala)
+		- LOCAL-STORAGE SECTION -> Local Variable (Variable yanng harus di inisialisasi ulang setiap program berjalan)
 		- LINKAGE SECTION -> - Untuk parameter yang diterima dari program lain (mirip `function parameter`).
 - PROCEDURE DIVISION
 	-> Bagian utama berisi logika program.
