@@ -20,7 +20,7 @@
 		4. Install OpenCobol pada Device
 # Struktur Program COBOL
 - IDENTIFICATION DIVISION
-	-> Ini merupakan bagian identitas dari program cobol sebagai contoh di C++ itu merupakan int main()
+	-> Ini merupakan bagian identitas dari program cobol
 - ENVIRONMENT DIVISION
 	-> Menjelaskan lingkungan tempat program berjalan
 		- Biasanya berhubungan dengan file input/output.
