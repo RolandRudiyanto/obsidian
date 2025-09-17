@@ -200,11 +200,13 @@ Contoh Penggunaan
 2. **MERGE** → menggabungkan beberapa file yang sudah diurutkan.
 3. **Update Master File** → gabungkan file transaksi dengan file master (umum di payroll, inventory, dll).
 ### **SORT**
+![[Pasted image 20250916141423.png]]
 - `SORT-FILE` = file kerja sementara.
 - `ON ASCENDING KEY` = urutan naik (bisa juga `DESCENDING`).
 - `USING` = file input yang belum terurut.
 - `GIVING` = file output hasil sort.
 ### **MERGE**
+![[Pasted image 20250916141334.png]]
 - Sintaks:
     `MERGE SORT-FILE ON ASCENDING KEY EMP-ID      USING FILE1 FILE2      GIVING FILE-MERGED.`
 - Aturan:
