@@ -228,7 +228,7 @@ Artinya:
 - Tiap elemen punya 5 digit angka.
 ### **Searching Tables**
 - Sequential Search
-	-  Digunakan kalau tabel **tidak terurut**.
+	- Digunakan kalau tabel **tidak terurut**.
 	- COBOL periksa elemen dari awal sampai cocok.
 - Binary Search
 	-  Digunakan kalau tabel **sudah diurutkan**.

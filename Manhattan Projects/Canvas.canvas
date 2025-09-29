@@ -1,0 +1,18 @@
+{
+	"nodes":[
+		{"id":"94118104d44d4d13","type":"group","x":-800,"y":-20,"width":400,"height":400,"label":"Master Data"},
+		{"id":"a8d51bc888953f47","type":"text","text":"Dashbord (Pipeline Progress)","x":-140,"y":-20,"width":250,"height":60},
+		{"id":"7217c6f0aa8be761","type":"text","text":"Calender","x":180,"y":-20,"width":250,"height":60},
+		{"id":"68e6d6337295e43b","type":"text","text":"Pipeline List (Add Pipeline)","x":-140,"y":140,"width":250,"height":60},
+		{"id":"17fcfc8f300b68b3","type":"text","text":"Role\n- Admin\n- Presales\n- Supervisor","x":-140,"y":-360,"width":250,"height":120},
+		{"id":"e715a149bb2a66c5","type":"text","text":"SalesType List (Master Data) (Admin)","x":520,"y":140,"width":250,"height":60},
+		{"id":"cf265c5a19f49730","type":"text","text":"User Management (Master Data) (Admin)\n- AM (AccountManager)\n- SA (SolutionArchitect)","x":180,"y":255,"width":250,"height":130},
+		{"id":"d7b2ff0619d86075","type":"text","text":"Master Data Request","x":-140,"y":260,"width":250,"height":60},
+		{"id":"bcd882411950088e","type":"text","text":"Login","x":-140,"y":-220,"width":250,"height":60},
+		{"id":"0dc89714d22180d3","type":"text","text":"Customer List","x":-780,"y":10,"width":160,"height":60},
+		{"id":"5e7d6fa3bf7d3d08","type":"text","text":"SalesStage List (Master Data) (Admin)","x":860,"y":140,"width":250,"height":60},
+		{"id":"50fdcb17447b1d0b","type":"text","text":"Product List (Master Data) (Admin)","x":520,"y":260,"width":250,"height":60},
+		{"id":"60e4d9cdc93dde19","type":"text","text":"Principal List (Master Data) (Admin)","x":860,"y":260,"width":250,"height":60}
+	],
+	"edges":[]
+}
