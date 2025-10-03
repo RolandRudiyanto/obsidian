@@ -1,0 +1,20 @@
+Solusi yang mw di buat
+- Ada 3 Job Portal yang berbeda, dan dimasukan ke One drive dan akan di tarik setiap ada data baru
+- Short Kandidat dengan AI (Hr Perlu masukin Spec lalu AI akan mencari kandidat melalui Cv dan akan mengeluarkan best kandidat)
+- Permasalahan Pada Tarik data (Buka satu account yang akan membaca semua )
+- Proses agar Data yang diberikan lebih clean
+- Plan A , Plan B, Plan C untuk Proses Data
+- Pisikotes dengan bantuan AI juga mau terbaca
+- Minta agar grafik dari hasil Psikogram dijelaskan melalui AI agar lebih di perjelas
+- tidak di kerjakan di excel lagi untuk Pisikotesnya
+- MBTI juga dapat di hasilkan melalui AI juga seperti tes kepriadian
+- Penjelasan mengenai hasil lebih di perjelas
+- Pekerjaannya dapat dilakukan secara online tanpa harus di buka per dokumen atau melalui dashboard
+- Chatbot untuk HR yang dimana employ dapat menanyakan hal hal mengenai ICT
+- Chatbot akan menjawab dengan menggunakan informasi dari RAG
+- Pertanyan di chatbot scope lebih luas
+	- Status Progress Kerja
+- Stream:
+	- Requirement
+	- Pisikotes
+	- Chatbo
