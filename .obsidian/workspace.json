@@ -25,21 +25,32 @@
             "id": "0ca14bb99b3b6e80",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Manhattan Projects/Canvas.canvas",
-                "viewState": {
-                  "x": 155,
-                  "y": 12.5,
-                  "zoom": -0.4148086272166696
-                }
+                "file": "Manhattan Projects/Testing API.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Canvas"
+              "icon": "lucide-file",
+              "title": "Testing API"
+            }
+          },
+          {
+            "id": "71d1841d5618a1f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Manhattan Projects/Testing API.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Testing API"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -188,13 +199,13 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "0ca14bb99b3b6e80",
+  "active": "71d1841d5618a1f9",
   "lastOpenFiles": [
-    "Manhattan Projects/Catatan.md",
     "Manhattan Projects/Mockup.md",
+    "Manhattan Projects/Catatan.md",
+    "Manhattan Projects/Canvas.canvas",
     "Catatan Meeting.md",
     "Manhattan Projects/Testing API.md",
-    "Manhattan Projects/Canvas.canvas",
     "Manhattan Projects/UML.md",
     "Rangkuman.md",
     "Soal File.md",
