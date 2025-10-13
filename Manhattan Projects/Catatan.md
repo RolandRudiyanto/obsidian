@@ -30,3 +30,9 @@ Fitur Manhattan Projects
 	- ProductList
 	- CustomerList
 	- UserManagement(SA (SolutionArchitect), AM (AccountManager))
+
+
+Jadi untuk flow user itu nanti profile dapat di isi untuk sa dan am yang dimana ketika register awal dia profilenya kosong dan nanti saat admin membuat sa atau am dia bisa pilih untuk user yang mana dimana itu akan mengisi profile_id
+
+Add Query ini di Postgessnya
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
