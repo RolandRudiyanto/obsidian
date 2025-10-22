@@ -48,3 +48,5 @@ lalu untuk dashbord
 
 
 Tambah Fitur Supervisor bisa kirim email (tanya ke pak pintong tantang ini)
+
+![[Pasted image 20251022204138.png]]
