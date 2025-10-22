@@ -43,3 +43,8 @@ FIX CODE:
 	  }
 	}
 
+Wireframe untuk bagian Pipeline dan Details Pipeline 
+lalu untuk dashbord
+
+
+Tambah Fitur Supervisor bisa kirim email (tanya ke pak pintong tantang ini)
