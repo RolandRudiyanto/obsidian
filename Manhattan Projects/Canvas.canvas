@@ -12,7 +12,8 @@
 		{"id":"0dc89714d22180d3","type":"text","text":"Customer List","x":-780,"y":10,"width":160,"height":60},
 		{"id":"5e7d6fa3bf7d3d08","type":"text","text":"SalesStage List (Master Data) (Admin)","x":860,"y":140,"width":250,"height":60},
 		{"id":"50fdcb17447b1d0b","type":"text","text":"Product List (Master Data) (Admin)","x":520,"y":260,"width":250,"height":60},
-		{"id":"60e4d9cdc93dde19","type":"text","text":"Principal List (Master Data) (Admin)","x":860,"y":260,"width":250,"height":60}
+		{"id":"60e4d9cdc93dde19","type":"text","text":"Principal List (Master Data) (Admin)","x":860,"y":260,"width":250,"height":60},
+		{"id":"7f951b8aac5576ac","x":370,"y":-562,"width":400,"height":262,"type":"file","file":"Pasted image 20251021100818.png"}
 	],
 	"edges":[]
 }

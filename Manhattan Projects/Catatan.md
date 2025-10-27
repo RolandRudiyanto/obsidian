@@ -36,3 +36,41 @@ Jadi untuk flow user itu nanti profile dapat di isi untuk sa dan am yang dimana 
 
 Add Query ini di Postgessnya
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+
+tambahkan onprogress untuk selain win sama lost
+
+Ubah Activity jadi ProgressUpdate ubah menjadi textarea (FE)
+
+Ganti jadi CutomerVisit (FE)
+
+add image untuk customervisit dengan blob
+
+gak ubah status di detail (FE)
+
+Dashbord List Pipeline yang gak ada update 30 hari 
+
+Dashbord di ubah menjad sankey 
+
+nanti ada add proposal untuk pipline
+
+untuk yang Proposal itu 1to1 dengan pipeline
+
+iaisnya
+- Judul*
+- NoProposal* Uniq
+- File*
+- RFA File
+- RFI File 
+
+Nama File Ambil dari NumberProposal
+
+NomorUrut/ict/Inisial SA/SCD/TP/Bulan MMYY
+001
+002
+003 is_deleted
+004
+
+tambah Kolom SA dan lainnya tambahkan inisial 
+
+Tambahkan Feedback 

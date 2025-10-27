@@ -20,7 +20,11 @@ Next API Update
 Bug : ID Value Tidak Sesuai
 
 FIX CODE:
-- Make Session API
+- Make Session API 
+	-> Session API ini tidak di perlukan karena (https://infoseminar.teknokrat.ac.id/2025/09/04/perang-sesi-login-kapan-sebaiknya-pakai-jwt-dan-kapan-pakai-session/)
+		- Backend login saya menggunakan JWT yang dimana sudah menggirimkan token saat login
+		- membangun **arsitektur _microservices_ atau sistem terdistribusi** yang kompleks
+		- Lalu JWT juga sudah mendukung untuk Multiuser karena masing masing login menyimpan kode JWT maising masing.
 - Fix Res Error Code 
 	500 (Internal Server Error) → means the server crashed or misbehaved internally.
 	400 (Bad Request) → means the client sent invalid data, which fits your case perfectly.
