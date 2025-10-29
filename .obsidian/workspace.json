@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Manhattan Projects/Testing API.md",
+                "file": "Manhattan Projects/Catatan.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Testing API"
+              "title": "Catatan"
             }
           }
         ],
@@ -201,6 +201,7 @@
   },
   "active": "71d1841d5618a1f9",
   "lastOpenFiles": [
+    "Manhattan Projects/Testing API.md",
     "Pasted image 20251022204138.png",
     "WhatsApp Image 2025-10-13 at 18.19.20_0d1dd9bd.jpg",
     "WhatsApp Image 2025-10-13 at 18.19.11_bfeb4f48.jpg",
@@ -212,7 +213,6 @@
     "Manhattan Projects/Catatan.md",
     "Manhattan Projects/Canvas.canvas",
     "Catatan Meeting.md",
-    "Manhattan Projects/Testing API.md",
     "Manhattan Projects/UML.md",
     "Rangkuman.md",
     "Soal File.md",
@@ -229,7 +229,6 @@
     "Manhattan Projects",
     "Pasted image 20250916141334.png",
     "Pasted image 20250815165121.png",
-    "Pasted image 20250815094941.png",
     "Meeting/Meeting Web Revamp 08 -19 - 2025.md",
     "Meeting",
     "Welcome.md"

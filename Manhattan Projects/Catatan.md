@@ -48,13 +48,13 @@ add image untuk customervisit dengan blob
 
 gak ubah status di detail (FE)
 
-Dashbord List Pipeline yang gak ada update 30 hari 
+Dashbord List Pipeline yang gak ada update 30 hari (p.updated_at;<;NOW() - INTERVAL '30 days') (Done)
 
-Dashbord di ubah menjad sankey 
+Dashbord di ubah menjad sankey (Tunggu Data)
 
 nanti ada add proposal untuk pipline
 
-untuk yang Proposal itu 1to1 dengan pipeline
+untuk yang Proposal itu 1to1 dengan pipeline (Done)
 
 iaisnya
 - Judul*
@@ -63,9 +63,9 @@ iaisnya
 - RFA File
 - RFI File 
 
-Nama File Ambil dari NumberProposal
+Nama File Ambil dari NumberProposal 
 
-NomorUrut/ict/Inisial SA/SCD/TP/Bulan MMYY
+NomorUrut/ict/Inisial SA/SCD/TP/Bulan MMYY (Done)
 001
 002
 003 is_deleted
@@ -74,3 +74,28 @@ NomorUrut/ict/Inisial SA/SCD/TP/Bulan MMYY
 tambah Kolom SA dan lainnya tambahkan inisial 
 
 Tambahkan Feedback 
+
+Tambahkan Edit dan Delete untuk Proposal (Done)
+
+
+SELECT 
+    ss.sales_stage AS sales_stage_name,
+    COUNT(p.id) AS total_pipelines,
+    COUNT(DISTINCT pro.id) AS total_pipelines_with_proposal
+FROM pipelines p
+JOIN sales_stages ss ON p.sales_stage_id = ss.id
+LEFT JOIN proposals pro ON pro.pipeline_id = p.id
+WHERE ss.sales_stage ILIKE 'win' OR ss.sales_stage ILIKE 'lost'
+GROUP BY ss.sales_stage
+ORDER BY ss.sales_stage;
+
+
+
+SELECT 
+    ss.sales_stage AS sales_stage_name,
+    COUNT(p.id) AS total_pipeline
+FROM sales_stages ss
+LEFT JOIN pipelines p ON p.sales_stage_id = ss.id
+GROUP BY ss.sales_stage
+ORDER BY ss.sales_stage;
+
