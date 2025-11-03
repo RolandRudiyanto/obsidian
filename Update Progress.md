@@ -1,0 +1,35 @@
+- Backend
+	- Done
+		- API Proposal (Create, Delete, Update, Get)
+		- API Feedback (Create, Update, Get)
+		- SMTP untuk Feedback
+		- Update Dashbord API Sankey Diagram
+		- API Pipeline Last Update 30hari
+		- Auth Microsoft (Kevin Sebastian)
+		- Menambahkan image buat customer visit pake BLOB (POST, GET, PATCH, DELETE tested) (Bagus)
+	- OnProgress
+		- Integrasi dengan Minio untuk file dan image
+- Frontend
+	- Done
+		- Tambahkan Permission di Layar Pipeline
+			- View : hanya bisa lihat table dan details 
+			- Update : Bisa melakukan update pipeline
+			- Create: Bisa Create Pipeline
+			- Delete: Bisa Delete Pipeline
+		- View Proposal di Pipeline Details
+		- Add Proposal
+		- Generate Number Proposal
+		- Menambahkan add, edit, delete di tab customer visit (Bagus)
+		- Menambahkan view photo di customer visit (Bagus)
+		- Dashboard Sankey Diagram
+		- Menambahkan Onprogress di Dashboard
+		- Merubah Tampilan Pipeline Details (Bagus)
+	- OnProgress
+		- Add RFA dan RFI untuk Proposal
+		- Delete Proposal
+		- Menambahkan pagination untuk customer visit (Bagus)
+		- Membuat Add Progress Update menjadi text area (Bagus)
+		- Integrasikan MS Auth ke FE (Kevin)
+		- Membuat Fitur Feedback di Pipeline Details
+		- Membuat Delete dan Edit Progress Update
+		- Menambahkan refetch di customer visit list (Bagus)

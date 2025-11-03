@@ -54,3 +54,15 @@ lalu untuk dashbord
 Tambah Fitur Supervisor bisa kirim email (tanya ke pak pintong tantang ini)
 
 ![[Pasted image 20251022204138.png]]
+
+<h2>New Feedback Received</h2>
+
+    <p><strong>Name:</strong> Test </p>
+
+    <p><strong>Email:</strong> Test@mail.com</p>
+
+    <p><strong>Title:</strong> Test</p>
+
+    <p><strong>Message:</strong><br>Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development. Its purpose is to permit a page layout to be designed, independently of the copy that will subsequently populate it, or to demonstrate various fonts of a typeface without meaningful text that could be distracting</p>
+
+    <p><em>Submitted at</em></p>
