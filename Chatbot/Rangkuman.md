@@ -1,0 +1,2 @@
+## **RAG**
+RAG atau Retrieval-Augmented Generation merupakan pendekatan untuk mengoptimalkan dan melatih LLM atau Large Language Model agar mengambil informasi yang lebih relevan dan telah di tentukan sebelumnya

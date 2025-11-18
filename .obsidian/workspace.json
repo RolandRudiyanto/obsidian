@@ -50,21 +50,51 @@
             }
           },
           {
+<<<<<<< Updated upstream
             "id": "a67b81cb738b4c46",
+=======
+            "id": "6071951f8c20a703",
+>>>>>>> Stashed changes
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< Updated upstream
                 "file": "Progrees.md",
+=======
+                "file": "Temp/Meeting 11-6-2025 POC BNI.md",
+>>>>>>> Stashed changes
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
+<<<<<<< Updated upstream
               "title": "Progrees"
             }
           }
         ],
         "currentTab": 3
+=======
+              "title": "Meeting 11-6-2025 POC BNI"
+            }
+          },
+          {
+            "id": "becec55ba1a4d521",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chatbot/Rangkuman.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Rangkuman"
+            }
+          }
+        ],
+        "currentTab": 4
+>>>>>>> Stashed changes
       }
     ],
     "direction": "vertical"
@@ -213,6 +243,7 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
+<<<<<<< Updated upstream
   "active": "a67b81cb738b4c46",
   "lastOpenFiles": [
     "Update Progress.md",
@@ -226,25 +257,42 @@
     "WhatsApp Image 2025-10-13 at 18.18.44_2d2daa18.jpg",
     "WhatsApp Image 2025-10-13 at 18.18.34_cae5d4f6.jpg",
     "WhatsApp Image 2025-10-13 at 18.18.27_160fe4de.jpg",
+=======
+  "active": "becec55ba1a4d521",
+  "lastOpenFiles": [
+    "Temp/Catatan Meeting.md",
+    "Chatbot/Rangkuman.md",
+    "Temp",
+    "Temp/Meeting 11-6-2025 POC BNI.md",
+    "Chatbot",
+    "Manhattan Projects/Catatan.md",
+    "Manhattan Projects/Testing API.md",
+    "Temp/Pasted image 20251022204138.png",
+    "Temp/WhatsApp Image 2025-10-13 at 18.19.20_0d1dd9bd.jpg",
+    "Temp/WhatsApp Image 2025-10-13 at 18.19.11_bfeb4f48.jpg",
+    "Temp/WhatsApp Image 2025-10-13 at 18.18.58_82358404.jpg",
+    "Temp/WhatsApp Image 2025-10-13 at 18.18.44_2d2daa18.jpg",
+    "Temp/WhatsApp Image 2025-10-13 at 18.18.34_cae5d4f6.jpg",
+    "Temp/WhatsApp Image 2025-10-13 at 18.18.27_160fe4de.jpg",
+>>>>>>> Stashed changes
     "Manhattan Projects/Mockup.md",
     "Manhattan Projects/Canvas.canvas",
-    "Catatan Meeting.md",
     "Manhattan Projects/UML.md",
-    "Rangkuman.md",
-    "Soal File.md",
-    "SQL.md",
+    "Temp/Rangkuman.md",
+    "Temp/Soal File.md",
+    "Temp/SQL.md",
     "Untitled 2.md",
     "Untitled 1.md",
     "Excalidraw/Drawing 2025-09-26 08.54.48.excalidraw.md",
     "Excalidraw",
-    "Pasted image 20250916141423.png",
+    "Temp/Pasted image 20250916141423.png",
     "Untitled.base",
     "Untitled 1.base",
     "Untitled 2.base",
-    "COBOL.md",
+    "Temp/COBOL.md",
     "Manhattan Projects",
-    "Pasted image 20250916141334.png",
-    "Pasted image 20250815165121.png",
+    "Temp/Pasted image 20250916141334.png",
+    "Temp/Pasted image 20250815165121.png",
     "Meeting/Meeting Web Revamp 08 -19 - 2025.md",
     "Meeting",
     "Welcome.md"
